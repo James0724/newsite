@@ -1,0 +1,33 @@
+@import "config";
+
+nav {
+	padding: 1rem;
+	margin: 0 5rem;
+	color: $pink;
+	.menu {
+		display: flex;
+		justify-content: space-between;
+		.logo-container {
+			svg {
+				width: 6rem;
+			}
+		}
+		.navbar {
+			display: flex;
+			align-items: center;
+			.nav-items {
+				list-style: none;
+				padding: 0;
+				font-size: clamp(0.7rem, 1.5vw, 1rem);
+				display: flex;
+				align-items: center;
+				.nav-item {
+					font-weight: 300;
+					letter-spacing: 0.1rem;
+					padding: 1rem;
+					margin: 0.5rem;
+				}
+			}
+		}
+	}
+}

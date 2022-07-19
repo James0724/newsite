@@ -1,0 +1,102 @@
+@import "navbar";
+@import "config";
+@import "home";
+@import "about";
+@import "skills";
+@import "project";
+@import "slick";
+@import "slick-theme";
+@import "art";
+
+//HTML Tags
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+p {
+	font-size: calc(0.675rem + (62.5vw - 30em) / 72);
+}
+h1 {
+	font-size: clamp(1.5rem, 5vw, 3.5rem);
+}
+h2 {
+	font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+}
+h3 {
+	font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+a {
+	text-decoration: none;
+	color: $white;
+}
+main {
+	counter-reset: main-title-counter;
+	section {
+		.numbered-title {
+			h3::before {
+				counter-increment: main-title-counter;
+				content: "0" counter(main-title-counter) ".";
+				font-family: " Roboto Mono", "Fira code", monospace;
+				color: $green;
+				position: relative;
+				margin-right: 10px;
+				font-weight: 300;
+			}
+		}
+	}
+}
+section {
+	height: 100vh;
+	position: relative;
+}
+body {
+	outline: none;
+	margin: 0;
+	line-height: 2;
+	letter-spacing: 1.5px;
+	background: $colorVar-main;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	font-family: "JetBrains Mono", " Roboto Mono", "Fira code", monospace;
+}
+
+//My Custom Classes
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 40%;
+	z-index: 5;
+	background-color: $colorVar-five;
+}
+.btn {
+	border-radius: 25rem;
+	width: max-content;
+	margin: 2rem 0;
+	padding: 1.5rem 1rem;
+	font-family: "Roboto Mono", "Fira code", monospace;
+	font-size: clamp(0.7rem, 1.5vw, 1rem);
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+}
+.btn-primary {
+	background-color: transparent;
+	border: none;
+	color: $colorVar-main;
+}
+.btn-secondary {
+	background-color: $colorVar-five;
+	border: none;
+	color: $colorVar-four;
+}
+
+//Responsive img
+@media (max-width: 680px) {
+	.btn {
+		padding: 0.9rem 0.5rem;
+		letter-spacing: 0.1rem;
+	}
+}
