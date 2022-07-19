@@ -5,7 +5,8 @@ import Home from "../components/Home";
 import background from "../images/background.jpg";
 
 import "../dist/css/main.css";
-// import AboutPage from "./about";
+import AboutPage from "./about";
+import Featured from "../components/featured";
 
 const backgroundStyles = {
 	backgroundImage: "url(" + background + " )",
@@ -20,11 +21,14 @@ const IndexPage = () => {
 				<Home />
 			</section>
 
-			{/* <section id="about">
+			<section id="about">
 				<AboutPage />
 			</section>
+			<section id="about">
+				<Featured />
+			</section>
 
-			<section id="projects"></section> */}
+			{/* <section id="projects"></section> */}
 		</main>
 	);
 };

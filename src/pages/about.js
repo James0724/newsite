@@ -1,9 +1,5 @@
 import React from "react";
-//import { StaticImage } from "gatsby-plugin-image";
 import Image from "../images/dev.png";
-
-// import { skills } from "../helpers/skills";
-// import Skillset from "../components/Skillset";
 
 function AboutPage() {
 	return (
@@ -13,19 +9,21 @@ function AboutPage() {
 					<h3>About me</h3>
 				</div>
 			</div>
-			<div className="container">
+			<div className="static-back-ground"></div>
+
+			<div className="contain-img">
+				<div className="overlay"></div>
 				<div className="img-wrapper">
 					<div className="profile-img">
-						<img className="img" src={Image} alt="James Kahoro" />
+						<img className="img-main" src={Image} alt="James Kahoro" />
 					</div>
 				</div>
 			</div>
+			<div className="contact-wrapper">
+				<h3>jameskahoro07@gmail.com</h3>
+			</div>
 
-			{/*
 			<div className="profile-wrapper">
-				<div className="heading">
-					<h1>Profile</h1>
-				</div>
 				<div className="profile">
 					<p>
 						Hello, I am a self-taught programmer. My interest in programming
@@ -47,13 +45,7 @@ function AboutPage() {
 						ecological research studies and consultancy.
 					</p>
 				</div>
-				<div className="skills">
-					<div className="heading">
-						<h1>My Skillsets </h1>
-					</div>
-					<Skillset skills={skills} />
-				</div>
-			</div> */}
+			</div>
 		</div>
 	);
 }
