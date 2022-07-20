@@ -48,7 +48,6 @@ main {
 	}
 }
 section {
-	height: 100vh;
 	position: relative;
 }
 body {
@@ -94,10 +93,20 @@ body {
 	color: $colorVar-four;
 }
 
-//Responsive img
-@media (max-width: 680px) {
+// //Responsive img
+// @media (max-width: 680px) {
+//
+// }
+//Responsive Design
+@media (max-width: 768px) {
 	.btn {
-		padding: 0.9rem 0.5rem;
-		letter-spacing: 0.1rem;
+		padding: 1rem 1.8rem;
+		letter-spacing: 0.2rem;
+		margin: 5rem 0 0 0;
+	}
+	body {
+		line-height: 1.5;
+		letter-spacing: 1px;
+		overflow-x: hidden;
 	}
 }

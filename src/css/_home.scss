@@ -1,26 +1,25 @@
 @import "config";
 #home {
 	margin: 0 0 2rem 0;
+	height: 100vh;
 }
 .hero {
 	display: flex;
-	height: 100%;
 	align-items: center;
 	z-index: 10;
-	overflow: hidden;
 }
 .art {
 	width: 50%;
-	height: 100%;
 	margin-right: 0px;
 }
 .home-info {
 	width: 50%;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0 2rem;
-	z-index: 5;
+	padding: 0 2rem;
+	z-index: 10;
 	&__intro {
 		width: fit-content;
 		color: $colorVar-three;
@@ -29,12 +28,12 @@
 		margin: 0;
 	}
 	&__name {
-		font-size: clamp(2.1rem, 5vw, 5rem);
+		font-size: clamp(1.5rem, 5vw, 5rem);
 		color: $colorVar-four;
 		white-space: nowrap;
 		font-weight: 900;
 		font-family: "Montserrat Alternates", sans-serif;
-		margin: 1rem 0;
+		margin: 0 0 1rem 0;
 	}
 	&__about-intro {
 		font-weight: 500;
@@ -44,30 +43,38 @@
 	}
 }
 
-//Responsive phone
-@media (max-width: 428px) {
+//Responsive Design
+@media (max-width: 768px) {
+	#home {
+		overflow: hidden;
+		height: 100vh;
+	}
 	.hero {
-		height: fit-content;
-		display: flex;
-		flex-direction: column-reverse;
+		height: 100%;
+		justify-content: center;
 	}
 	.art {
 		position: absolute;
-		width: 50%;
+		width: 100%;
 		right: 0;
 		top: 0;
 	}
 
 	.home-info {
-		width: 90%;
+		margin: 5% -20% 0 0;
+		width: 80%;
 		box-sizing: border-box;
-		position: absolute;
-		top: 14rem;
-		margin: 0;
+		background-color: $colorVar-main;
+		padding: 1rem;
+		&__name {
+			white-space: wrap;
+			margin: 0 0 0.5rem 0;
+		}
+		&__about-intro {
+			margin: 1rem 0;
+		}
+	}
+	.d-none {
+		visibility: hidden;
 	}
 }
-// @media (max-width: 744px) {
-// 	.hero {
-// 		height: fit-content;
-// 	}
-// }
